@@ -247,3 +247,165 @@ int main() {
 }
 // CHECK THE GREATEST AMONG THE 3 ENTERED NUMBER
 
+// CHECK IF THE GIVEN CHARACTER IS A DIGIT OR NOT
+#include<stdio.h>
+void main(){
+    char ch;
+    printf("enter any character: ");
+    scanf("%c",&ch);
+    if(ch>=48 && ch<=57){
+        printf("the given character is a digit");
+    }
+    else{
+        printf("the given character isn't a digit");
+    }
+}
+// ELECTRICITY BILL CALCULATOR
+#include<stdio.h>
+void main(){
+    int unit,bill;
+    printf("enter your electricity units: ");
+    scanf("%d",&unit);
+    if(unit<=0 && unit>=100){
+        bill=unit*5;
+        printf("your total electricity bill is %d",bill);
+    }
+    else if(unit>=101 && unit<=200){
+        bill= unit*7;
+        printf("your total electricity bill is %d",bill);
+    }
+    else if (unit>=201 && unit<=300){
+        bill=unit*10;
+        printf("your total electricity bill is %d",bill);
+    }
+    else{
+        bill=unit*12;
+        printf("your total electricity bill is %d",bill);
+    }
+}
+// SINGLE SUBJECT GRADE CALCULATOR
+#include<stdio.h>
+void main(){
+    int marks;
+    printf("enter your marks: ");
+    scanf("%d",&marks);
+    if(marks>=90 && marks<=100){
+        printf("you scored A grade");
+    }
+    else if(marks>=80 && marks<90){
+        printf("you scored B grade");
+    }
+    else if(marks>=70 && marks<80){
+        printf("you scored C grade");
+    }
+    else if (marks>=60 && marks<70){
+        printf("you have scored D grade");
+    }
+    else {
+        printf("you have failed");
+    }
+}
+// OVERALL RESULT CALCULATOR
+#include<stdio.h>
+void main(){
+    float marks;
+    int a,b,c,d,e;
+    printf("enter your english marks: ");
+    scanf("%d",&a);
+    printf("enter your maths marks: ");
+    scanf("%d",&b);
+    printf("enter your hindi marks: ");
+    scanf("%d",&c);
+    printf("enter your science marks: ");
+    scanf("%d",&d);
+    printf("enter your sanskrit marks: ");
+    scanf("%d",&e);
+    marks=((a+b+c+d+e)/5);
+    if (a < 33 || b < 33 || c < 33 || d < 33 || e < 33){
+        printf("you have 1 or more subject having marks less than 33");
+    }
+    else if(marks>=90 && marks<=100){
+        printf("you scored A ");
+    }
+    else if(marks>=80 && marks<90){
+        printf("you scored B grade");
+    }
+    else if(marks>=70 && marks<80){
+        printf("you scored C grade");
+    }
+    else if (marks>=60 && marks<70){
+        printf("you have scored D grade");
+    }
+    else {
+        printf("you have failed");
+    }
+}
+// SIMPLE ATM 
+#include<stdio.h>
+void main(){
+    int pin=1234,pin2;
+    printf("enter your pin:");
+    scanf("%d",&pin2);
+    if(pin==pin2){
+        printf("1:WITHDRAW\n");
+        printf("2:BALANCE\n");
+    }
+    else{
+        printf("invalid pin");
+    }
+}
+// INCOME TAX CALCULATOR
+#include<stdio.h>
+void main(){
+    float tax,sal;
+    printf("enter your annual salary: ");
+    scanf("%f",&sal);
+    if( sal>0 && sal<300000){
+        tax=0;
+        printf("no tax for you");
+    }
+    else if(sal>300000 && sal<600000){
+        tax=sal*0.05;
+        printf("you have to pay 5 percent tax\n");
+        printf("you have to pay %f as tax",tax);
+    }
+    else if(sal>600000 && sal<900000){
+         tax=sal*0.1;
+         printf("you have to pay 10 percent tax\n");
+        printf("you have to pay %f as tax",tax);
+    }
+    else if(sal>900000 && sal<1200000){
+         tax=sal*0.12;
+         printf("you have to pay 12 percent tax\n");
+        printf("you have to pay %f as tax",tax);
+    }
+    else{
+         tax=sal*0.2;
+         printf("you have to pay 20 percent tax\n");
+        printf("you have to pay %f as tax",tax);
+    }
+
+}
+// MOBILE RECHARGE PLAN CHOOSER
+#include<stdio.h>
+void main(){
+    int i;
+    printf("enetr any number (1-3):");
+    scanf("%d",&i);
+    switch (i)
+    {
+    case 1:
+        printf("1.5GB/day for 28 days");
+        break;
+    case 2:
+        printf("2GB/day for 56 days");
+        break;
+    case 3:
+        printf("3GB/day for 84 days");
+        break;
+    default:
+       printf("invalid number");
+       
+    }
+}
+// TRAFFIC CONTROL
