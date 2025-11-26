@@ -104,3 +104,146 @@ int main() {
     printf("%d", a&&b);
     return 0;
 }
+// TO CHECK WHETHER THE GIVEN NUMBER IS 2-DIGIT OR NOT (ANSWER IN BOOLEAN)
+#include<stdio.h>
+int main() {
+    int a;
+    printf("enter any number:");
+    scanf("%d",&a);
+    printf("%d", (a>9)&& (a<100));
+    return 0;
+}
+// CONDITIONALS
+// AGE DETECTOR(IF-ELSE)
+#include <stdio.h>
+int main() {
+    int a;
+    printf("enter your age:");
+    scanf("%d",&a);
+
+    if(a<=10 && a>0){
+      printf("you are a child ;) \n");
+    }
+    else if (a>=10 && a<=19){
+        printf("you are teenager ;) \n");
+    }
+    else if (a>=20 && a<30) {
+        printf("you are a twenkie;) \n ");
+    }
+     else if (a<0){
+        printf("invalid age :( \n");
+    }
+    else {
+        printf("you are old;) \n");
+    }
+   
+    printf("thank you \n");
+}
+//ADULT OR NOT (TERNARY STATEMENT)
+#include <stdio.h>
+int main() {
+    int a;
+    printf("enter your age: ");
+    scanf("%d", &a);
+    (a>=18)? printf("you are an adult"): printf("you are not an adult");
+}
+// WEEK-DAY(SWITCH CASE)
+#include<stdio.h>
+int main() {
+    int day;
+    printf("enter your day(1-7):");
+    scanf("%d", &day);
+    switch (day) {
+        case 1 : printf("monday");
+        break;
+        case 2 : printf("tuesday");
+        break;
+        case 3 : printf("wednesday");
+        break;
+        case 4 : printf("thrusday");
+        break;
+        case 5 : printf("friday");
+        break;
+        case 6 : printf("saturday");
+        break;
+        case 7 : printf("sunday");
+        break;
+        default : printf("not a valid number!! \n");
+    }
+}
+// TO CHECK IF THE GIVEN NUMBER IS POSITIVE OR NEGATIVE ALONG WITH ODD OR EVEN
+#include<stdio.h>
+int main() {
+    int d;
+    printf("enter any number: \n");
+    scanf("%d", &d);
+    if (d>=0){
+        printf("the number is positive. \n");
+        if (d%2==0){
+            printf("the number is even.\n");
+        } else {
+            printf("the number is odd.\n");
+        }
+    }
+    else if (d<=0){
+        printf("the number is negative.\n");
+        if (d%2==0){
+            printf("the number is even.\n");
+        } else {
+            printf("the number is odd \n");
+        }
+    }
+}
+//TO CHECK IF THE STUDENT IS PASSED OR NOT
+#include<stdio.h>
+int main() {
+    int marks;
+    printf("enter your marks:");
+    scanf("%d", &marks);
+    (marks>=30)? printf("you are pass!!"):printf("you failed");
+    return 0;
+}
+// CHECK IF THE ENTERED CHARACTER IS AN ALPHABET
+#include<stdio.h>
+int main() {
+   char ch;
+   printf("enter any character: ");
+   scanf("%c",&ch);
+   if((ch>='a' && ch<='z')||(ch>='A' && ch<='Z')){
+     printf("the given character is an alphabet"); 
+   }
+   else{
+    printf("the given character isn't an alphabet");
+   }
+}
+// CHECK IF THE ENTERED ALPHABET IS A VOWEL OR CONSONANT
+#include<stdio.h>
+int main() {
+   char ch;
+   printf("enter any character: ");
+   scanf("%c",&ch);
+   if((ch=='a') || (ch=='e') || (ch=='i') || (ch=='o') || (ch=='u')){
+     printf("the given character is a vowel"); 
+   }
+   else if ((ch=='A') || (ch=='E') || (ch=='I') || (ch=='O') || (ch=='U')){
+    printf("the given character is a vowel");
+   }
+   else{
+    printf("the given character is a consonant");
+   }
+}
+// CHECK IF THE GIVEN YEAR IS A LEAP YEAR OR NOT
+#include<stdio.h>
+int main() {
+   char year;
+   printf("enter any year: ");
+   scanf("%d",&year);
+   if(year%4==0){
+     printf("the given year is a leap year"); 
+   }
+   else{
+    printf("the given year isn't a leap year");
+   }
+}
+// CHECK THE GREATEST AMONG THE 3 ENTERED NUMBER
+
