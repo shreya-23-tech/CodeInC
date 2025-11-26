@@ -71,4 +71,36 @@ int main() {
     printf("the perimeter of the given rectangle is: %f", 2*(a+b));
     return 0;
 }
-
+// AVERAGE OF 3 USER INPUT NUMBER
+#include<stdio.h>
+int main() {
+    int a,b,c;
+    printf("enter first number:");
+    scanf("%d",&a);
+    printf("enter second number:");
+    scanf("%d",&b);
+    printf("enter third number:");
+    scanf("%d",&c);
+    printf("the average of three numbers: %d", (a+b+c)/3);
+    return 0;
+}
+// TO FIND IF THE GIVRN NUMBER IS DIVISIBLE BY 2(ANSWER IN BOOLEAN)
+#include<stdio.h>
+int main() {
+    
+    int w;
+    printf("enter any number: \n");
+    scanf("%d",&w);
+    printf("%d", w%2==0);
+    return 0;
+}  
+// USE OF AND OPERATOR
+int main() {
+    int a,b;
+    printf("if its monday('1' if yes '0' if no): \n");
+    scanf("%d", &a);
+    printf("if its snowing(1 for yes 0 for no) \n" );
+    scanf("%d",&b);
+    printf("%d", a&&b);
+    return 0;
+}
