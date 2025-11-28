@@ -408,4 +408,82 @@ void main(){
        
     }
 }
+// A SIMPLE CALCULATOR(SWITCH CASE)
+#include<stdio.h>
+void main(){
+    int a,b;
+    char ch;
+    printf("enter first number:");
+    scanf("%d",&a);
+    printf("enter another number:");
+    scanf("%d",&b);
+    printf("enter the operator you want to perform the operation: ");
+    scanf(" %c",&ch);
+    switch(ch){
+    case '+' : printf("the addition of the given numbers is %d", a+b);
+              break;
+    case '-' : printf("the substraction of the given number is %d",a-b);
+            break;
+    case '*' : printf("the product of he given numbers is %d", a*b);
+              break;
+    case '/' : printf(" the division of the given numbers is %f",a/b);
+             break;
+    default : printf("invalid operator");          
+        }
+}
+
 // TRAFFIC CONTROL
+// LOOPS
+// TO ADD THE DIGITS OF GIVEN NUMBERS
+#include<stdio.h>
+int main(){
+    int n,sum=0;
+    printf("enter any number:");
+    scanf("%d",&n);
+    while(n>0){
+        sum+=(n%10);
+        n=n/10;
+    }
+    printf("the sum of digit is %d",sum);
+    return 0;
+}
+// TO FIND AMSTRONGS NUMBER
+#include<stdio.h>
+void main(){
+    int a,b,c,d,n;
+    for(n=100;n<=999;n++){
+        a=n%10;
+        d=n/10;
+        b=d%10;
+        c=d/10;
+        if(a*a*a+b*b*b+c*c*c==n){
+            printf("the armstrong's number is %d\n",n);
+        }
+    }
+}
+// FIBONACCI SERIES
+#include<stdio.h>
+void main(){
+    int a=0,b=1,c,i;
+    printf("%d %d\n",a,b);
+    for(i=3;i<=20;i++){
+        c=a+b;
+        printf("%d\n",c);
+        a=b;
+        b=c;
+    }
+}
+// REVERSE A NUMBER
+#include<stdio.h>
+int main(){
+     int num,r,rev=0;
+     printf("enter any number:");
+     scanf("%d",&num);
+    while(num!=0){
+        r=num%10;
+        rev=rev*10+r;
+        num/=10;
+    }
+    printf("the reverse=%d",rev);
+}
+
