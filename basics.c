@@ -486,4 +486,84 @@ int main(){
     }
     printf("the reverse=%d",rev);
 }
+// TO CHECK IF THE GIVEN NUMBER IS PALLINDROME OR NOT
+#include<stdio.h>
+int main(){
+    int num,r,rev=0,a;
+    printf("enter any number:");
+    scanf("%d",&num);
+    a=num;
+    while(num!=0){
+        r=num%10;
+        rev=rev*10+r;
+        num/=10;
+    }
+    if(rev==a){
+        printf("yes it is a pallindrome");
+    }   
+    else printf("no");
+}
+// ARRAY
+// TO FIND THE HIGHEST NUMBER IN THE ARRAY
+#include<stdio.h>
+int main(){
+    int a[4],i,max=0;
+    printf("enter 4 number:");
+    for(i=0;i<4;i++){
+    scanf("%d",&a[i]);}
+    for(i=0;i<4;i++){
+        if (a[i]>max){
+            max=a[i];
+        }
+    }
+    printf("the highest number is %d",max);
+}
+// ARRAY SORTING
+#include<stdio.h>
+int main(){
+    int a[4],i,j,x;
+    printf("enter 4 numbers");
+    for(i=0;i<4;i++){
+        scanf("%d",&a[i]);
+    }    
+   for(i=0;i<3;i++){
+     for(j=0;j<3-i;j++){
+       if(a[j]<a[j+1]){
+        x=a[j];
+        a[j]=a[j+1];
+        a[j+1]=x;
+       }
+    }}
+   printf("sorted array:");
+   for (i=0;i<4;i++){
+    printf("%d \t",a[i]);
+   }   
+}
+// TO FIND THE SUM OF ALL ARRAY ELEMENTS
+#include<stdio.h>
+int main(){
+    int a[4],i,sum=0;
+    printf("enter 4 number:");
+    for(i=0;i<4;i++){
+    scanf("%d",&a[i]);}
+    for(i=0;i<4;i++){
+            sum+=a[i];
+        }
+    printf("the sum of the array numbers is %d",sum);
+  }
+// TO FIND THE SUM OF ALL EVEN NUMBERS IN AN ARRAY
+#include<stdio.h>
+int main(){
+    int a[10],i,sum=0;
+    printf("enter 10 number:");
+    for(i=0;i<10;i++){
+    scanf("%d",&a[i]);}
+    for(i=0;i<10;i++){
+        if(a[i]%2==0){
+            sum+=a[i];
+        }
+  }
+   printf("the sum of even nums in the array numbers is %d",sum);
+}
+
 
