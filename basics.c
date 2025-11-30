@@ -1,6 +1,6 @@
 // PRINT STATEMENT
 #include<stdio.h>
-     int main() {
+int main() {
      printf("HELLO WORLD!!");
      return 0;
 }
@@ -565,5 +565,169 @@ int main(){
   }
    printf("the sum of even nums in the array numbers is %d",sum);
 }
+// TO REVERSE AN ARRAY
+#include<stdio.h>
+int main(){
+    int a[4],i,f,sum=0;
+    printf("enter 4 number:");
+    for(i=0;i<4;i++){
+    scanf("%d",&a[i]);}
+    for(i=0;i<4/2;i++){
+        f=a[i];
+        a[i]=a[3-i];
+        a[3-i]=f;   
+  }
+   printf("reverseed arrray is:");
+   for(i=0;i<4;i++){
+    printf("%d \t",a[i]);
+   }
+}
+// STRINGS
+// TO FIND THE NUMBER OF VOWELS IN A STRING
+#include<stdio.h>
+int countVowels(char str[]){
+    int i,count=0;
+    for(i=0;str[i]!='\0';i++){
+       if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||str[i]=='A'||str[i]==
+        'E'||str[i]=='I'||str[i]=='O'|| str[i]=='U'){
+            count++;
+        }   
+    }
+    return count; 
+}
+int main(){
+  char str[40];
+  printf("enter a string:");
+  fgets(str,40,stdin);
+  int vowel=countVowels(str);
+  printf("the number of vowels is %d",vowel);
+}
+// TO COUNT THE NUMBER OF LETTERS/CHARACTERS IN A STRING
+#include<stdio.h>
+int main(){
+    int i,count=0,j;
+    char str[40];
+    printf("enter any string:");
+    fgets(str,40,stdin);
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]=='\n')
+              break;
+        count++;
+    }
+    printf("%d",count);
+}
+// TO CALCULATE THE FREQUENCY OF VOWEL IN A STRING
+#include<stdio.h>
+int main(){
+    int i,a=0,e=0,I=0,o=0,u=0;
+    char str[40];
+    printf("enter any string:");
+    fgets(str,40,stdin);
+    for(i=0;str[i]!='\0';i++){
+        switch (str[i])
+        {
+        case 'a': case 'A': a++; 
+            break;
+        case'e': case'E': e++;
+            break;
+        case 'i':case'I': I++;
+            break;
+        case 'o': case'O': o++;
+            break;
+        case'u': case 'U': u++;
+            break;
+        }
+    }
+    printf("a=%d \n",a);
+    printf("e=%d \n",e);
+    printf("i=%d \n",I);
+    printf("o=%d \n",o);
+    printf("u=%d \n",u);
+}
+// TO CONVERT LOWERCASE/UNICASE STRING INTO UPPERCASE
+#include<stdio.h>
+int main(){
+   char str[40];
+   int i;
+   printf("enter any string:");
+   fgets(str,40,stdin);
+   for(i=0;str[i]!='\0';i++){
+    if(str[i]>='a' && str[i]<='z')
+       str[i]=str[i]-32;
+   }
+   printf("ASCII %s",str);
+}
+// 2D ARRAY
+// TO FIND THE SUM OF BOTH DIAGONALS SEPARETELY
+#include<stdio.h>
+int main(){
+    int n,i,j,maindag=0,secdag=0;
+    printf("enter the order of square matrix:");
+    scanf("%d",&n);
+    int a[n][n];
+    printf("enter the elements of the matrix:");
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+
+    for(i=0;i<n;i++){
+        maindag+=a[i][i];
+        secdag+=a[i][n-1-i];
+    }
+    printf("the sum of 1st diagonal is %d\n", maindag);
+    printf("the sum of second diagonal is %d\n",secdag);
+}
+// STRUCTURE
+// TO PRINT DETAILS OF STUDENTS
+#include<stdio.h>
+struct student{
+    int roll;
+    char name[30];
+    float marks;
+};
+int main(){
+    struct student s[5];
+    printf("enter the roll,name and marks of students:");
+    for(int i=0;i<5;i++){
+        scanf("%d %s %f",&s[i].roll,s[i].name,&s[i].marks);
+    }
+    printf("STUDENTS DETAILS\n");
+    for(int i=0;i<5;i++){
+        printf("%d %s %.2f\n", s[i].roll, s[i].name, s[i].marks);
+    }
+}
+// RECURSION
+// TO FIND GCD USING RECURSION
+#include<stdio.h>
+int gcd(int a,int b){
+    if(b==0) return a;
+    return gcd(a,a%b);
+}
+int main(){
+    int x,y;
+    printf("enter any two numbers:");
+    scanf("%d %d",&x, &y);
+    printf("gcd= %d", gcd(x,y));
+}
+// POINTERS
+// TO SWAP TWO ELEMENTS OF AN ARRAY
+#include<stdio.h>
+void swap(int*arr,int i,int j){
+    int x=arr[i];
+    arr[i]=arr[j];
+    arr[j]=x;
+}
+int main(){
+    int arr[7];
+    int i;
+    printf("enter 7 numbers for an array:");
+    for(i=0;i<7;i++) scanf(" %d",&arr[i]);
+    swap(arr,2,4);
+    printf("the swapped array is");
+    for(i=0;i<7;i++) printf(" %d",arr[i]);
+}
+
 
 
