@@ -728,5 +728,27 @@ int main(){
     printf("the swapped array is");
     for(i=0;i<7;i++) printf(" %d",arr[i]);
 }
-
+// POINTERS
+// TO FIND THE GREATEST NUMBER FROM THE GIVE TWO NUMBER
+#include<stdio.h>
+void swap(int *a,int *b);
+int main(){
+    int x=3, y=8;
+    swap(&x,&y);
+}
+void swap(int *a, int *b){
+    if(*a>*b) printf("the greatst num =%d",*a);
+    else printf("the greatst num =%d",*b);
+}
+// TO PRINT THE AARRAY BACKWARDS
+#include<stdio.h>
+int main(){
+    int a[4],i;
+    printf("enter 4 numbers for array:");
+    for(i=0;i<4;i++) scanf("%d",&a[i]);
+    int *p=a+3;
+    for(i=0;i<4;i++){
+        printf("%d\t",*(p-i));
+    }
+    }
 
