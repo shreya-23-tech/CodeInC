@@ -751,4 +751,217 @@ int main(){
         printf("%d\t",*(p-i));
     }
     }
+// TO SWAP TWO NUMBERS
+#include<stdio.h>
+void swap(int *a, int *b);
+int main(){
+    int x,y;
+    printf("enter value of x:");
+    scanf("%d",&x);
+    printf("enter value of y:");
+    scanf("%d",&y);
+    swap(&x,&y);
+    printf(" the value of x is %d",x);
+    printf("\n the value of y is %d",y);
+}
+void swap(int *a,int *b){
+    int t=*a;
+    *a=*b;
+    *b=t;
+}
+// TO PRINT THE SQAURE OF A NUMBER 
+#include<stdio.h>
+int sqr(int *a);
+int main(){
+    int x;
+    printf("enter value of x:");
+    scanf("%d",&x);
+    sqr(&x);
+    printf(" the sqaure of given number is %d",x);
+}
+int sqr(int *a){
+    *a=*a*(*a);
+}
+// TO FIND THE SUM OF ARRAY'S ELEMENT
+#include<stdio.h>
+int sum(int *arr,int len);
+int main(){
+    int arr[4];
+    printf("enter 4 numbers for array:");
+    for(int i=0;i<4;i++){
+        scanf("%d",&arr[i]);
+    }
+    int a=sum(arr,4);
+    printf(" the sum is %d",a);
+}
+int sum(int *arr,int len){
+    int sum=0;
+    for(int i=0;i<len;i++){
+        sum+=*(arr+i);
+    }
+    return sum;
+}
+//TO PRINT MATRIX IN ANTI-CLOCK SPIRAL ORDER
+#include<stdio.h>
+int main(){
+    int arr[10][10],r,c,top,bottom,right,left;
+    printf("enter the row and column:");;
+    scanf("%d %d",&r,&c);
+    top=0;
+    bottom=r-1;
+    right=c-1;
+    left=0;
+    printf("enter the values in matrix:");
+    for(int i=0;i<r;i++){
+        for( int j=0;j<c;j++){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    printf("anti-clockwise spiral order of the matrix is:");
+    while(top<=bottom && left<=right){
+        for(int i=left;i<=right;i++){
+            printf("%d ",arr[bottom][i]);
+        }
+        bottom--;
+        for(int i=bottom;i>=top;i--){
+            printf("%d ",arr[i][right]);
+        }
+        right--;
+        if(top<=bottom){
+            for(int i=right;i>=left;i--){
+                printf("%d ",arr[top][i]);
+            }
+            top++;
+        }
+        if (left<=right){
+            for(int i=bottom;i>=top;i--){
+                printf("%d ",arr[i][left]);
+            }
+            left++;
+        }
+    }
 
+}
+//TO PRINT BORDER ELEMENTS OF A MATRIX
+#include<stdio.h>
+int main(){
+    int arr[10][10],r,c,top,bottom,right,left;
+    printf("enter the row and column:");
+    scanf("%d %d",&r,&c);
+    top=0;
+    bottom=r-1;
+    right=c-1;
+    left=0;
+    printf("enter the values in matrix:");
+    for(int i=0;i<r;i++){
+        for( int j=0;j<c;j++){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+     printf(" THE BOUNDARY ELEMENTS = ");
+     for(int i=left;i<=right;i++)
+        printf("%d ",arr[top][i]);
+     for(int i=top+1;i<=bottom;i++)
+        printf("%d ",arr[i][right]);
+     if(top<bottom){
+         for(int i=right-1;i>=left;i--)
+            printf("%d ", arr[bottom][i]);
+     }
+     if(left<right){
+         for(int i=bottom-1;i>top;i--){
+             printf("%d ", arr[i][left]);
+        }
+    }
+}
+//TO PRINT A MATRIX LAYER-BY-LAYER
+#include<stdio.h>
+int main(){
+    int arr[10][10],r,c,top,bottom,right,left;
+    printf("enter the row and column:");;
+    scanf("%d %d",&r,&c);
+    int layer=1;
+    top=0;
+    bottom=r-1;
+    right=c-1;
+    left=0;
+    printf("enter the values in matrix:");
+    for(int i=0;i<r;i++){
+        for( int j=0;j<c;j++){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    while(top<=bottom && left<=right){
+         printf(" layer %d = ",layer);
+         for(int i=left;i<=right;i++)
+            printf("%d ",arr[top][i]);
+         for(int i=top+1;i<=bottom;i++)
+            printf("%d ",arr[i][right]);
+         if(top<bottom){
+             for(int i=right-1;i>=left;i--)
+                printf("%d ", arr[bottom][i]);
+         }
+         if(left<right){
+             for(int i=bottom-1;i>top;i--){
+                 printf("%d ", arr[i][left]);
+        }
+    }
+    top++;
+    bottom--;
+    left++;
+    right--;
+    layer++;
+    } 
+}
+//TO PRINTT A MATRIX ZIG-ZAG ROW-WISE
+#include<stdio.h>
+int main(){
+    int arr[10][10],r,c,i,j,k;
+    printf("enter the row and column:");
+    scanf("%d %d",&r,&c);
+    printf("enter the values in matrix:");
+    for(int i=0;i<r;i++){
+        for( int j=0;j<c;j++){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    printf(" THE ZIG-ZAG MATRIX VALUE (ROW-WISE) = ");
+     for(i=0;i<r;i++){
+        if(i%2!=0){
+            for(j=c-1;j>=0;j--){
+                printf("%d ",arr[i][j]);
+            }
+        }
+        else{
+            for(j=0;j<c;j++){
+                printf("%d ",arr[i][j]);
+            }
+        }
+     }
+    }
+//TO PRINT A MATRIX ZIG-ZAG COLUMN-WISE
+#include<stdio.h>
+int main(){
+    int arr[10][10],r,c,i,j,k;
+    printf("enter the row and column:");
+    scanf("%d %d",&r,&c);
+    printf("enter the values in matrix:");
+    for(int i=0;i<r;i++){
+        for( int j=0;j<c;j++){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    printf(" THE ZIG-ZAG MATRIX VALUE (COLUMN-WISE) = ");
+     for(i=0;i<c;i++){
+        if(i%2!=0){
+            for(j=r-1;j>=0;j--){
+                printf("%d ",arr[j][i]);
+            }
+        }
+        else{
+            for(j=0;j<r;j++){
+                printf("%d ",arr[j][i]);
+            }
+        }
+     }
+    }
+//
